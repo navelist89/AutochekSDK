@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  
+
+  <ion-button (click)="startScan('pedometer')">startScan (pedometer)</ion-button>
+  <ion-button (click)="startScan('bodyscale')">startScan (bodyscale)</ion-button>
+  <ion-button (click)="startScan('bpmeter')">startScan (bloodpressure)</ion-button>
+  <ion-button (click)="startScan('glucosemeter')">startScan (glucosemeter)</ion-button>
+  <ion-button (click)="stopScan()">stopScan</ion-button>
+
+  <ion-list>
+    <ion-item *ngFor="let d of scannedList" (click)="bond(d)">
+      
+      
+      name : {{d.name}}<br>
+      id : {{d.id}}<br>
+    </ion-item>
+  </ion-list>
+  
+
+  List of bonded Devices
+
+  <ion-list>
+    <ion-item *ngFor="let d of bondedList" (click)="openSubpage(d)">
+      <!-- <div>
+        <button (click)="connect(d)" *ngIf="(d.staticStatusSubject | async) != 10"> connect </button>
+        <button (click)="disconnect(d)" *ngIf="(d.staticStatusSubject | async) == 10"> disconnect </button>
+        <button (click)="debond(d)"> debond </button>
+      </div> -->
+      <br>
+      staticStatus : {{d.staticStatusSubject | async}}<br>
+      dynamicStatus : {{d.dynamicStatusSubject | async}}<br>
+      name : {{d.name}}<br>
+      id : {{d.id}}<br>
+    </ion-item>
+  </ion-list>
+  
+</ion-content>

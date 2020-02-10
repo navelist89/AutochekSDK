@@ -1,0 +1,7 @@
+{
+  "name": "subplatformCordova",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

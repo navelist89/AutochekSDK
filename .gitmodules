@@ -1,0 +1,6 @@
+[submodule "src/autochek-base"]
+	path = src/autochek-base
+	url = https://github.com/navelist89/autochek-base
+[submodule "src/autochek-device"]
+	path = src/autochek-device
+	url = https://github.com/navelist89/autochek-device

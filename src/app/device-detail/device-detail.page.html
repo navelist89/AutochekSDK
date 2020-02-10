@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>device-detail</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="device">
+  <div >
+    Welcome to device : {{device.id}} / {{device.type}} -> {{device.class_name}}
+  </div>
+
+  <ion-item>
+    static status: {{staticStatus}}
+  </ion-item>
+  <ion-item>
+    dynamic status: {{dynamicStatus}}
+  </ion-item>
+  <ion-item>
+    {{device.name}}
+  </ion-item>
+  <ion-item>
+    {{device.id}}
+  </ion-item>
+  <ion-item>
+    {{device.class_name}}
+  </ion-item>
+
+  <ion-item *ngIf="!isConnected" (click)="connect()">
+    connect
+  </ion-item>
+  <ion-item *ngIf="isConnected" (click)="disconnect()">
+    disconnect
+  </ion-item>
+  <ion-item *ngIf="isConnected" (click)="sync()">
+    sync
+  </ion-item>
+</ion-content>
