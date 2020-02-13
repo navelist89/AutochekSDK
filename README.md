@@ -11,6 +11,13 @@
   > npm install -g cordova
   
 3) 본 리포지토리에서 pull
+
+  > git clone https://github.com/navelist89/AutochekSDK
+  
+  > git submodule init
+  
+  > git submodule update
+
 4) npm 의존성 설치
   > 본 리포지토리의 pacakge.json 과 같은 경로 내에서
   
