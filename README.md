@@ -1,4 +1,4 @@
-# AutochekSubplatformCordovaDev
+# AutochekSDK
 
 
 ## 1. 환경설정
