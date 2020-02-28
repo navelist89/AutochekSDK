@@ -9,13 +9,7 @@
       ],
       "autochek-base/*": [
         "./src/autochek-base/*"
-      ],
-      "autochek-cordova/*": [
-        "./src/autochek-cordova/*"
-      ],
-      "autochek-server/*": [
-        "./src/autochek-server/*"
-      ],
+      ]
     },
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
