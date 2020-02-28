@@ -6,6 +6,7 @@ import { CordovaGlucosemeterService } from 'src/autochek-device/services/cordova
 import { GlucosemeterMeasurement } from 'autochek-base/objects/device-data-object';
 import { EnumDeviceStaticStatus, DeviceBase } from 'src/autochek-device/objects/base/DeviceBase';
 import { Router } from '@angular/router';
+import { DeviceBodyscaleDual } from 'autochek-device/services/device-bodyscale-dual';
 
 
 @Component({
@@ -23,6 +24,7 @@ export class HomePage {
     private glucosemeterSerivce: CordovaGlucosemeterService,
     private ngZone: NgZone,
     private router: Router,
+    private deviceBodyscaleDual:DeviceBodyscaleDual,
   ) {
 
     this.glucosemeterSerivce.onGlucosemeterMeasurements.subscribe(
@@ -93,6 +95,10 @@ export class HomePage {
   openSubpage(d: DeviceBase) {
     // this.router.navigate(['device-detail'], { state: { device: d } });
     this.router.navigate(['device-detail', d.id]);
+  }
+
+  async startAutochekDual(){
+    return await this.deviceBodyscaleDual.measureStart(171, 'male', 1989, 9, 13);
   }
 
 }

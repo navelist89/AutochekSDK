@@ -14,6 +14,7 @@
   <ion-button (click)="startScan('bpmeter')">startScan (bloodpressure)</ion-button>
   <ion-button (click)="startScan('glucosemeter')">startScan (glucosemeter)</ion-button>
   <ion-button (click)="stopScan()">stopScan</ion-button>
+  <ion-button (click)="startAutochekDual()">AutochekDual</ion-button>
 
   <ion-list>
     <ion-item *ngFor="let d of scannedList" (click)="bond(d)">
