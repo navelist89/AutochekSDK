@@ -41,7 +41,7 @@
     "firebase": "^7.6.1",
     "ionic-native-qnscale": "git+https://github.com/navelist89/ionic-native-qnscale.git",
     "kakao-sdk": "^3.1.0",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "rxjs": "~6.5.1",
     "tslib": "^1.9.0",
     "zone.js": "~0.9.1"
